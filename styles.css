@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	border: 0;
 	outline: none;
+	overflow-y: auto;
 }
 
 body {
@@ -12,9 +13,15 @@ body {
 	align-items: center;
 	justify-content: center;
 	font-family: 'Lato' sans-serif;
+	height: 100%;
+}
+.weather-icon {
+	background-color: #06283d;
+	border-radius: 18px;
 }
 
 .container {
+	margin-top: 20px;
 	background-color: white;
 	width: 500px;
 	height: auto;
@@ -104,6 +111,10 @@ body {
 
 .red {
 	color: red;
+}
+.search-box button:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #06283d;
 }
 
 @media (max-width: 375px) {
