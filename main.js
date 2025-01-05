@@ -14,8 +14,14 @@ async function getData(cityName) {
 		if (!response.ok) {
 			throw new Error('City not found or invalid response')
 		}
+
 		const data = await response.json()
-		console.log(data)
+
+		const iconCode = data.weather[0].icon
+		const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`
+		const weatherIcon = document.querySelector('.weather-icon')
+		weatherIcon.src = iconUrl // Подставляем иконку
+
 		temp.innerHTML = `${Math.round(data.main.temp)}&#8451`
 		city.textContent = data.name
 		humidity.textContent = data.main.humidity + '%'
@@ -43,7 +49,9 @@ form.addEventListener('submit', event => {
 	} else {
 		city.classList.remove('red')
 	}
+
 	getData(cityName)
+	form.reset()
 })
 
 getData('Kyiv')
