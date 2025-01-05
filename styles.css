@@ -4,11 +4,9 @@
 	box-sizing: border-box;
 	border: 0;
 	outline: none;
-	overflow-y: auto;
 }
 
 body {
-	height: 100dvh;
 	background-color: #06283d;
 	display: flex;
 	align-items: center;
