@@ -19,7 +19,6 @@ body {
 	width: 500px;
 	height: auto;
 	padding: 28px 32px;
-	overflow: hidden;
 	border-radius: 18px;
 	transition: 0.6s ease-out;
 }
