@@ -107,3 +107,9 @@ body {
 .red {
 	color: red;
 }
+
+@media (max-width: 375px) {
+	.container {
+		padding: 14px;
+	}
+}
